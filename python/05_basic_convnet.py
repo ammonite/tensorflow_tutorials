@@ -45,7 +45,7 @@ h_conv1 = tf.nn.relu(
 # %% And just like the first layer, add additional layers to create
 # a deep net
 n_filters_2 = 16
-W_conv2 = weight_variable([filter_size, filter_size, n_filters_1, n_filters_2])
+W_conv2 = weight_variable([filter_size, filter_size, n_filters_1, n_filters_2]) # W_conv2.eval(session=sess).shape
 b_conv2 = bias_variable([n_filters_2])
 h_conv2 = tf.nn.relu(
     tf.nn.conv2d(input=h_conv1,
